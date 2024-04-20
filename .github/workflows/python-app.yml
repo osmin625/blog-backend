@@ -49,7 +49,7 @@ jobs:
           script: |
               sudo docker pull $DOCKER_USERNAME/$IMAGE_NAME:$IMAGE_TAG
               sudo docker rm -f $CONTAINER_NAME
-              sudo docker rmi $(docker images -f "dangling=true" -q)
-              sudo docker run --env-file ./.env -d --name $CONTAINER_NAME -p 8080:8080 $DOCKER_USERNAME/$IMAGE_NAME:$IMAGE_TAG
+              sudo docker image prune -f
+              sudo docker run --env-file ./hrb/.env --name $CONTAINER_NAME -p 8080:8080 $DOCKER_USERNAME/$IMAGE_NAME:$IMAGE_TAG
 
     
