@@ -10,7 +10,7 @@ on:
     branches: [ "main" ]
 
 env:
-  DOCKER_USERNAME: ${{ secrets.DOCKERHUB_USERNAME }}
+  DOCKER_USERNAME: osmin625
   IMAGE_NAME: hrb_server
   IMAGE_TAG: latest
   DOCKERFILE_PATH: .
@@ -36,7 +36,7 @@ jobs:
         name: Build and Push Docker Image
         run: |
           docker buildx create --use
-          docker buildx build -t $DOCKER_USERNAME$IMAGE_NAME:$IMAGE_TAG $DOCKERFILE_PATH --push
+          docker buildx build -t $DOCKER_USERNAME/$IMAGE_NAME:$IMAGE_TAG $DOCKERFILE_PATH --push
       -
         name: executing docker pull and run commands with remote ssh using ssh key
         uses: appleboy/ssh-action@master
