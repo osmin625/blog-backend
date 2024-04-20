@@ -50,6 +50,6 @@ jobs:
               sudo docker pull $DOCKER_USERNAME/$IMAGE_NAME:$IMAGE_TAG
               sudo docker rm -f $CONTAINER_NAME
               sudo docker image prune -f
-              sudo docker run --env-file ./hrb/.env --name $CONTAINER_NAME -p 8080:8080 $DOCKER_USERNAME/$IMAGE_NAME:$IMAGE_TAG
+              sudo docker run --env-file .env --name $CONTAINER_NAME -p 8080:8080 $DOCKER_USERNAME/$IMAGE_NAME:$IMAGE_TAG
 
     
