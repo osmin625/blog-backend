@@ -25,10 +25,12 @@ MODEL_PATH = config("MODEL_PATH", default="./ml/model/")
 MODEL_NAME = config("MODEL_NAME", default="model.pkl")
 HOST = config("HOST", default="")
 PORT = config("PORT", default="")
+DB_NAME = config("DB_NAME", default="")
 DB_HOST = config("DB_HOST", default="")
 DB_PORT = config("DB_PORT", default="")
 DB_USERNAME = config("DB_USERNAME", default="")
 DB_PASSWORD = config("DB_PASSWORD", default="")
-DB_TARGETDB = config("DB_TARGETDB", default="")
+# MONGODB_URL = f"{DB_NAME}://{DB_USERNAME}:{DB_PASSWORD}@{DB_HOST}:{DB_PORT}"
+MONGODB_URL = f"{DB_NAME}://{DB_HOST}:{DB_PORT}"
 MODEL_HOST = config("MODEL_HOST", default="")
 MODEL_PORT = config("MODEL_PORT", default="")
