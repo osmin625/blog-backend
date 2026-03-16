@@ -1,0 +1,16 @@
+{
+  "mcpServers": {
+    "obsidian": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "obsidian-mcp-server",
+        "--dir",
+        "C:\\Users\\tmdal\\.gemini\\antigravity\\scratch\\hugo_recsys_blog\\normalize_out"
+      ],
+      "env": {
+        "DEBUG": "obsidian-mcp-server*"
+      }
+    }
+  }
+}
